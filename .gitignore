@@ -1,0 +1,12 @@
+# Ignore history files
+.bash_history
+.zsh_history
+
+# Ignore cache directories
+.cache/
+.local/
+
+# Ignore other sensitive or unwanted files
+.ssh/
+.gnupg/
+.vscode/
