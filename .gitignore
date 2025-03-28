@@ -1,12 +1,30 @@
-# Ignore history files
+# Ignore everything by default
+*
+
+# Except this file
+!.gitignore
+
+# Allow specific config files
+!.bashrc
+!.bash_profile
+!.zshrc
+!.zshrc_custom
+!.gitconfig
+!.vimrc
+!.p10k.zsh
+
+# Allow specific config directories (tweak these to your needs)
+!.config/
+!.config/nvim/
+!.config/kitty/
+!.config/hypr/
+
+# Ignore personal/sensitive or auto-generated files and directories
 .bash_history
 .zsh_history
-
-# Ignore cache directories
-.cache/
-.local/
-
-# Ignore other sensitive or unwanted files
 .ssh/
 .gnupg/
+.cache/
+.local/
+.npm/
 .vscode/
