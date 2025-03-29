@@ -25,7 +25,12 @@
 # !.config/**
 # .config/*.*
 # !.config/**
+!dotfiles/
+!dotfiles/.config/
+!dotfiles/.config/waybar
+!dotfiles/.config/waybar/**
 !.config/
+!.config/waybar
 !.config/bashrc
 !.config/dunst
 !.config/fcitx
@@ -43,7 +48,6 @@
 !.config/nwg-look           # if you use it
 !.config/nwg-look/
 !.config/nwg-look/**
-!.config/waybar
 
 # --- Now override specific files/folders you want to ignore even within these directories ---
 # (These rules come after, so they override the whitelist if needed.)

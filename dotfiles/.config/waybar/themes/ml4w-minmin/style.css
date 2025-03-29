@@ -1,0 +1,221 @@
+@import "macchiato.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 13px;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+.modules-left > * > *:first-child {
+  margin-left: -10px;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+  background-color: @surface2;
+}
+#workspaces button {
+  color: #888;
+}
+#workspaces button.active {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff, 0 0 12px #ac8fb6;
+}
+#workspaces button:hover {
+  color: #ffffff;
+}
+/* 
+#workspaces button.focused {
+  background-color: @lavender;
+  box-shadow: inset 0 -3px #ffffff;
+} */
+#workspaces button.urgent {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
+  animation-name: button-blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes button-blink {
+  to {
+    color: #ff5555;
+    text-shadow: 0 0 8px #ffaaaa, 0 0 12px #ffaaaa;
+  }
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+
+/* COLORINGS */
+#pulseaudio {
+  color: @maroon;
+}
+#network {
+  color: @yellow;
+}
+#temperature {
+  color: @sky;
+}
+#battery {
+  color: @green;
+}
+#clock {
+  color: @flamingo;
+}
+#custom-updates, #custom-pacman {
+  color: @blue;
+}
+#power-profiles-daemon {
+  color: @peach;
+}
+#custom-notification {
+  color: @red;
+}
+#window {
+  color: @rosewater;
+}
+
+
+/* ################ WAYBAY LAYOUT  ###################### */
+
+/* ------------ UNUSED --------------- */
+#memory,
+#cpu,
+/* ------------- LEFT ---------------- */
+button,
+#bluetooth,
+#pulseaudio,
+#network,
+/* ------------ RIGHT ---------------- */
+#custom-language, #custom-fcitx5,
+#custom-pacman,
+#temperature,
+#power-profiles-daemon,
+#custom-ml4w-welcome,
+#clock,
+/* ----------------------------------- */
+#battery,
+#custom-notification
+{
+  padding: 5px 10px;
+  margin:0;
+}
+
+
+/* NOTE: Put modules the modules here on above too because we will just override their edges here */
+/* <<<<<<<<<<<<<<< EDGES ON LEFT EDGE */
+/* ------------- (((((((( LEFT MODULES ---------------- */
+button:first-child {
+  padding-left: 30px;
+}
+#custom-language, #custom-fcitx5,
+  /* ------------ ((((((( RIGHT MODULES ---------------- */
+#battery {
+  padding-left: 20px;
+}
+/* EDGES ON RIGHT EDGE >>>>>>>>>>>>>>>>>>>>>> */
+/* ------------- LEFT MODULES ))))))) ---------------- */
+#network,
+/* ------------ RIGHT MODULES )))))))---------------- */
+#clock
+/* ----------------------------------- */
+/* #custom-notification (removed because it is special) */
+{
+  padding-right: 20px;
+}
+
+/* (((((::::: LEFT ::::::))))) */
+.modules-left {
+  background-color: @base;
+  padding: 0;
+  border: 3px dashed @waybar-border;
+  border-radius: 15px;
+}
+
+#custom-empty {
+  margin: 0 10px 0 10px;
+  border-left: 3px dotted @waybar-border;
+}
+
+/* (((((((((((((((((((((((( RIGHT */
+#custom-language, #custom-fcitx5, #battery {
+  background-color: @base;
+  border-left: 3px @waybar-border;
+  border-top: 3px @waybar-border;
+  border-bottom: 3px @waybar-border;
+  border-style: dashed;
+  border-radius: 15px 0 0 15px;
+  margin-left: 10px;
+}
+
+/* :::::::::::::::::::::::: */
+.modules-right > * >
+*:not(#hyprland-language):not(#custom-fcitx5):not(#clock):not(#custom-notification):not(#custom-updates):not(#battery) {
+  background-color: @base;
+  border-top: 3px @waybar-border;
+  border-bottom: 3px @waybar-border;
+  border-style: dashed;
+}
+
+/* RIGHT ))))))))))))))))))))))) */
+#clock, #custom-notification {
+  background-color: @base;
+  border-top: 3px @waybar-border;
+  border-right: 3px @waybar-border;
+  border-bottom: 3px @waybar-border;
+  border-style: dashed;
+  border-radius: 0 15px 15px 0;
+}
+
+/* (SPECIAL) BIGGER NOTIF */
+#custom-notification {
+  font-size: 20px;
+  padding-right: 18px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @sapphire;
+}
+
+@keyframes blink {
+  to {
+    color: #AA0000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  font-weight: bold;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}
+
+
