@@ -1,1 +1,2 @@
 alias dotfiles='/usr/bin/git --git-dir=/home/ritsukisansan/.dotfiles/ --work-tree=/home/ritsukisansan'
+export ANKI_WAYLAND=1

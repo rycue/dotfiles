@@ -15,7 +15,7 @@ ModifierOnlyKeyTimeout=250
 [Hotkey/TriggerKeys]
 0=Zenkaku_Hankaku
 1=Hangul
-2=Shift+Tab
+2=Super+space
 
 [Hotkey/EnumerateGroupForwardKeys]
 0=Super+space
