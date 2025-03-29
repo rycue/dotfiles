@@ -1,3 +1,77 @@
+# Ignore everything by default
 *
+
+# Unignore the .gitignore file itself
 !.gitignore
-!.ml4w-hyprland
+
+# Unignore essential shell and configuration files (if you want them)
+!.bashrc
+!.zshrc
+!.zshrc_custom
+!.gitconfig
+!.p10k.zsh
+!.Xresources
+!.xinitrc
+
+# Unignore configuration directories in .config that you actively modify:
+# !.config/
+# !.config/*
+# !.config/**
+# .config/*.*
+# !.config/**
+!.config/
+!.config/bashrc
+!.config/dunst
+!.config/fcitx
+!.config/fcitx/**
+!.config/fcitx5
+!.config/fcitx5/**
+!.config/kitty
+!.config/ml4w-hyprland-settings
+!.config/mozc
+!.config/mozc/**
+!.config/com.ml4w.hyprlandsettings
+!.config/ml4w-hyprland-settings
+!.config/nwg-dock-hyprland  # if you use it
+!.config/nwg-displays       # if you use it
+!.config/nwg-look           # if you use it
+!.config/nwg-look/
+!.config/nwg-look/**
+!.config/waybar
+
+# --- Now override specific files/folders you want to ignore even within these directories ---
+# (These rules come after, so they override the whitelist if needed.)
+
+# Ignore large application configurations that you don't want tracked:
+.config/Code/
+.config/VSCodium/
+.config/vivaldi/
+.config/Electron/
+.config/obsidian/
+.config/Kvantum/
+.config/KDE/
+.config/Pinta/
+.config/obs-studio
+.config/ags
+.config/hyde
+.config/kate
+.config/Thunar
+.config/qutebrowser/
+
+# TEMP TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP  TEMP 
+.config/rofi
+
+# Ignore backups, caches, and logs:
+.cache/
+cfg_backups/
+hypr_new_backup/
+
+# Ignore personal directories (if they ever get pulled into the working tree):
+Desktop/
+Documents/
+Downloads/
+Pictures/
+Videos/
+Music/
+Templates/
+Public/
