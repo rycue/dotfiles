@@ -1,30 +1,51 @@
-# Ignore everything by default
+# ──────────────────────────────────────────────────────────
+# 1. Ignore EVERYTHING by default
 *
-
-# Except this file
+# ──────────────────────────────────────────────────────────
+# 2. Do not ignore .gitignore itself
 !.gitignore
-
-# Allow specific config files
+# ──────────────────────────────────────────────────────────
+# 3. Whitelist only the .config folder and its entire contents
+!.config/
+!.config/**
+!.config/hypr/
+!.config/Hyprland/
+# ──────────────────────────────────────────────────────────
+# 4. Optionally, whitelist additional dotfiles if needed
+# Uncomment these lines if you want to track these files outside .config
 !.bashrc
 !.bash_profile
 !.zshrc
 !.zshrc_custom
-!.gitconfig
-!.vimrc
 !.p10k.zsh
+!.gitconfig
+!.Xresources
+!.xinitrc
 
-# Allow specific config directories (tweak these to your needs)
-!.config/
-!.config/nvim/
-!.config/kitty/
-!.config/hypr/
 
-# Ignore personal/sensitive or auto-generated files and directories
-.bash_history
-.zsh_history
-.ssh/
-.gnupg/
-.cache/
-.local/
-.npm/
-.vscode/
+# Large programs
+.config/Code/
+.config/VSCodium/
+.config/vivaldi/
+.config/Hyprlock-Styles/
+.config/hyde/
+.config/Hyprland/build/
+
+# Backups & logs
+.config/cfg_backups/
+.config/hypr_new_backup/
+.config/obsidian/
+.config/ml4w/
+.config/pulse.bak/
+.config/ags/
+.config/Hyprland/subprojects/
+.config/Hyprland/src/
+
+# Caches
+.config/librewolf/
+.config/mozilla/
+.config/gtk-3.0/
+.config/dconf/
+.config/qutebrowser/
+.config/KDE/
+.config/systemd/
