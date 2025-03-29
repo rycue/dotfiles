@@ -13,6 +13,12 @@
 !.Xresources
 !.xinitrc
 
+# FOLDERS AND FILES OUTSIDE .CONFIG
+!RitsukiScripts
+!RitsukiScripts/
+!RitsukiScripts/*
+!RitsukiScripts/**
+
 # Unignore configuration directories in .config that you actively modify:
 # !.config/
 # !.config/*
