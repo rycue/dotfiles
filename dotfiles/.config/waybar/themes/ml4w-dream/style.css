@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(176, 52, 253, 0);
   border-radius:  0px;
   transition-property: background-color;
   transition-duration: .5s;
@@ -140,6 +140,7 @@ button,
 {
   padding: 10px 10px;
   margin:0;
+
 }
 
 
@@ -170,13 +171,13 @@ button:first-child {
 .modules-left {
   background-color: @crust;
   padding: 0;
-  border: 0 solid @waybar-border;
+  border: 4px solid @dream;
   border-radius: 12px;
 }
 
 #custom-empty {
   margin: 0 10px 0 10px;
-  border-left: 0px dotted @waybar-border;
+  border-left: 4px solid @dream;
 }
 
 /* (((((::::: CENTER ::::::))))) */
@@ -189,29 +190,29 @@ button:first-child {
 /* (((((((((((((((((((((((( RIGHT */
 #custom-fcitx5, #battery {
   background-color: @crust;
-  border-left: 0px @waybar-border;
-  border-top: 0px @waybar-border;
-  border-bottom: 0px @waybar-border;
+  border-left: 4px @dream;
+  border-top: 4px @dream;
+  border-bottom: 4px @dream;
   border-style: solid;
   border-radius: 12px 0 0 12px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 /* :::::::::::::::::::::::: */
 .modules-right > * >
 *:not(#hyprland-language):not(#custom-fcitx5):not(#clock):not(#custom-notification):not(#custom-updates):not(#battery) {
   background-color: @crust;
-  border-top: 0px @waybar-border;
-  border-bottom: 0px @waybar-border;
+  border-top: 4px @dream;
+  border-bottom: 4px @dream;
   border-style: solid;
 }
 
 /* RIGHT ))))))))))))))))))))))) */
 #clock, #custom-notification {
   background-color: @crust;
-  border-top: 0px @waybar-border;
-  border-right: 0px @waybar-border;
-  border-bottom: 0px @waybar-border;
+  border-top: 4px @dream;
+  border-right: 4px @dream;
+  border-bottom: 4px @dream;
   border-style: solid;
   border-radius: 0 12px 12px 0;
 }
