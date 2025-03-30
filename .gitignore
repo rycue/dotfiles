@@ -30,6 +30,9 @@
 !dotfiles/.config/waybar
 !dotfiles/.config/waybar/**
 !.config/
+!.config/pipewire
+!.config/pipewire/**
+!.config/waybar
 !.config/waybar
 !.config/bashrc
 !.config/dunst
