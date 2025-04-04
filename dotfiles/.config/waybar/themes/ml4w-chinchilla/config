@@ -1,0 +1,350 @@
+// Configured by Ritsukisansan (2024)
+// ----------------------------------------------------- 
+//
+{
+    "layer": "top",
+    "margin-top": 10,
+    "margin-bottom": -5,
+    "margin-left": 0,
+    "margin-right": 5,    
+    "spacing": 0,
+
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json"
+        // "~/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/empty",
+        "custom/empty",
+        "custom/empty",
+        "bluetooth",
+        "pulseaudio",
+        "network",
+        "custom/fullscreen"
+    ],
+    
+    "modules-center": [
+        "hyprland/window"
+    ],
+    
+    "modules-right": [
+        "custom/language", "custom/fcitx5",
+        "custom/pacman",
+        "temperature",
+        "power-profiles-daemon",
+        // "group/tools",
+        "custom/tray",
+        // "custom/exit",
+        "custom/ml4w-welcome",
+        "clock",
+        "custom/empty",
+        "battery", 
+        "custom/notification"
+    ],
+
+    // ------------------------------------------------------------------------------
+    // MODULES - MODULES - MODULES - MODULES - MODULES - MODULES - MODULES - MODULES 
+    // ------------------------------------------------------------------------------
+
+    "hyprland/workspaces": {  
+        "disable-scroll": true,
+        "all-outputs": true,
+	    "sort-by-number": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "active": "",
+            "urgent": ""
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": []
+          }
+    },
+
+    "mpd": {
+        "tooltip": true,
+        "tooltip-format": "{artist} - {album} - {title} - Total Time : {totalTime:%M:%S}",
+        "format": " {elapsedTime:%M:%S}",
+        "format-disconnected": "⚠  Disconnected",
+        "format-stopped": " Not Playing",
+        "on-click": "mpc toggle",
+        "state-icons": {
+        "playing": "",
+        "paused": ""
+        }
+    },
+    "mpd#2": {
+        "format": "",
+        "format-disconnected": "",
+        "format-paused": "",
+        "format-stopped": "",
+        // Commands to execute on events
+        "on-click": "mpc -q pause && mpc -q prev && mpc -q start"
+    },
+    "mpd#3": {
+        "interval": 1,
+        "format": "{stateIcon}",
+        "format-disconnected": "",
+        "format-paused": "{stateIcon}",
+        "format-stopped": "",
+        "state-icons": {
+        "paused": "",
+        "playing": ""
+        },
+        // Commands to execute on events
+        "on-click": "mpc toggle"
+    },
+    "mpd#4": {
+        "format": "",
+        "format-disconnected": "",
+        "format-paused": "",
+        "format-stopped": "",
+        // Commands to execute on events
+        "on-click": "mpc -q pause && mpc -q next && mpc -q start"
+    },
+    "hyprland/window": {
+        "rewrite": {
+            ".* - (.*?)$": "$1",
+            ".* — (.*?)": "$1",
+            "(.*) Microsoft Teams": "$1"
+        },
+        "icon": true,
+        "icon-size": 32,
+        "separate-outputs": true
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "DEF",
+            "performance": "高性能",
+            "balanced": "バランス",
+            "power-saver": "省電力"
+        }
+    },
+    "custom/swap": {
+        "on-click": "~/.config/waybar/scripts/swap.sh",
+        "tooltip": "Swap between waybar configs",
+        "format": "Bg  "
+    },
+    "custom/mpd": {
+        "format": " {title} - {artist}",
+        "interval": 5,
+        "exec": "mpc current --format='\"title\":\"%title%\",\"artist\":\"%artist%\"'"
+    },
+    "custom/cava-internal": {
+        "exec": "sh ~/.config/waybar/scripts/Cava.sh",
+        "format": "{}",
+        "tooltip": false,
+        "on-click": "swaymsg reload & pkill waybar & waybar",
+        "layer": "below",
+        "output": "all"
+    },
+    "custom/notification": {
+        "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<sup></sup>",
+            "none": "",
+            "dnd-notification": " <sup></sup>",
+            "dnd-none": "",
+            "inhibited-notification": "<sup></sup>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": " <sup></sup>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/pacman": {
+        "format": " {}",
+        "escape": true,
+        "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
+        "exec-if": "exit 0", // always run; consider advanced run conditions
+        // "exec": "~/.config/ml4w/scripts/updates.sh",
+        // "return-type": "json",
+        "interval": 1800,
+        "on-click": "kitty -e sudo pacman -Syu", // update system
+        "on-click-right": "~/.config/ml4w/settings/software.sh",
+        "signal": 8
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+        "activated": "",
+        "deactivated": ""
+        }
+    },
+    "custom/ml4w-welcome": {
+        "on-click": "flatpak run com.ml4w.sidebar",
+        "tooltip-format": "Open ML4W Sidebar App",
+        "format": "  ML4W",
+        "icon-size": 14,
+        "spacing": 5
+    },
+    "clock": {
+        "format": " {:%I:%M %p}",
+        "format-alt": " {:%B %d (%a)}",
+        "tooltip": true,
+        "tooltip-format": " {:%B %d, %a}\n Singapore",
+        "timezone": "Singapore",
+        "interval": 1
+    },
+    // "clock": {
+    //     "format": "  {:%H:%M:%S}",
+    //     "format-alt": "  {:%A, %B %d, %Y (%R)}",
+    //     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    //     "calendar": {
+    //         "mode"          : "month",
+    //         "mode-mon-col"  : 3,
+    //         "weeks-pos"     : "right",
+    //         "on-scroll"     : 1,
+    //         "on-click-right": "mode",
+    //         "format": {
+    //             "months":     "<span color='#ffead3'><b>{}</b></span>",
+    //             "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+    //             "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+    //             "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+    //             "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+    //         }
+    //     },
+    //     "actions": {
+    //         "on-click-right": "mode",
+    //         "on-click-forward": "tz_up",
+    //         "on-click-backward": "tz_down",
+    //         "on-scroll-up": "shift_up",
+    //         "on-scroll-down": "shift_down"
+    //     },
+    //     "interval": 1
+    // },
+    "cpu": {
+        "format": "﬙ {usage: >3}%",
+        "on-click": "alacritty -e htop"
+    },
+    "memory": {
+        "format": " {: >3}%",
+        "on-click": "alacritty -e htop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent: >3}%",
+        "format-icons": ["", ""],
+        // "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-down": "light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob",
+        // "on-scroll-up": "brightnessctl -c backlight set +5%"
+        "on-scroll-up": "light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob"
+    },
+    "battery": {
+        "states": {
+        // "good": 95,
+        "warning": 30,
+        "critical": 15
+        
+        },
+        "format": "{icon}{capacity: >3}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+        //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format": "⚠Disabled",
+        "format-wifi": "  {essid}",
+        // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-ethernet": " Wired",
+        "format-disconnected": "⚠Disconnected",
+        "on-click": "alacritty -e nmtui"
+        // "on-click": "nm-connection-editor"
+    },
+    "bluetooth": {
+        "format": "  {status}",
+        "format-disabled": "  OFF",
+        "format-on": "  ON",
+        "format-connected": "  {device_alias}",
+        "format-connected-battery": "  {device_alias}",
+        "tooltip-format": "User: {controller_alias}\nConnected: {num_connections}",
+        "tooltip-format-connected": "User: {controller_alias} | Connected: {num_connections}\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "BT Address: {device_address}\nBattery: {device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon}{volume:>3}%",
+        "format-bluetooth": "{icon}{volume}%",
+        "format-muted": "×",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "   ",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
+        "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob"
+    },
+    "custom/fcitx5": {
+        "exec": "~/RitsukiScripts/waybar/fcitx5-language.sh",
+        "interval": 1,
+        "format": "  {}",
+        "tooltip": "true",
+        "tooltip-format": "SUPER + SPACE to toggle",
+        "on-click": "dbus-send --print-reply --session --dest=org.fcitx.Fcitx5 /controller_1 org.fcitx.Fcitx.Controller.SwitchNext"
+    },
+    "custom/empty": {
+        "format": "​"
+    },
+    "custom/fullscreen": {
+        // "format": " MAXIMIZED",
+        "tooltip-format": "SUPER + F to toggle",
+        "exec": "~/RitsukiScripts/waybar/fullscreen_indicator.sh",
+        "interval": 1
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "nwgbar",
+        "tooltip": false
+    },
+    "custom/launcher": {
+        "format": " ",
+        "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+        "tooltip": false
+    }
+    
+}

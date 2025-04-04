@@ -1,0 +1,41 @@
+/*
+*
+* Catppuccin Macchiato palette
+* Maintainer: rubyowo
+*
+*/
+
+@define-color base   #2c3247;
+@define-color mantle #222736;
+@define-color crust  RGBA(30, 15, 60, 0.5);
+
+@define-color dream #6c688e;
+
+@define-color text     #d8dee9;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #b2c0e3;
+
+@define-color surface0 #404857;
+@define-color surface1 #545d75;
+@define-color surface2 #657897;
+
+@define-color overlay0 #6f7faa;
+@define-color overlay1 #7a86c4;
+@define-color overlay2 #8c94d7;
+
+@define-color blue      #8faee5;
+@define-color lavender  #bfbaf3;
+@define-color sapphire  #7fb2e6;
+@define-color sky       #92cce3;
+@define-color teal      #8dd7ca;
+@define-color green     #a7db96;
+@define-color yellow    #f2c464;
+@define-color peach     #ffb378;
+@define-color maroon    #f994a9;
+@define-color red       #f16969;
+@define-color mauve     #d084d5;
+@define-color pink      #efb6f6;
+@define-color flamingo  #ffcad4;
+@define-color rosewater #ffd7be;
+
+@define-color waybar-border rgba(100,100,100,0.2);

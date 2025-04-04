@@ -1,0 +1,258 @@
+@import "macchiato.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  border: none;
+  background: none;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+button {
+  box-shadow: none;
+}
+
+button>* {
+  font-size: 17px;
+  padding-bottom: 2.5px;
+  font-weight: bold;
+}
+
+.modules-left>*:first-child {
+  margin-left: -10px;
+}
+
+#pulseaudio:hover,
+#custom-notification:hover {
+  text-shadow: 0 0 8px #ff5858, 0 0 10px #ff1717;
+}
+
+#bluetooth:hover {
+  text-shadow: 0 0 8px #0095ff, 0 0 10px #6588a1;
+}
+
+#network:hover {
+  text-shadow: 0 0 8px #fff653, 0 0 10px #8d8a4a;
+}
+
+#custom-fcitx5:hover {
+  text-shadow: 0 0 8px #a8ff50, 0 0 10px #507f4d;
+}
+
+#custom-updates:hover {
+  text-shadow: 0 0 8px #ffa2ef, 0 0 10px #f200ff;
+}
+
+#power-profiles-daemon:hover {
+  text-shadow: 0 0 12px #fe7f01, 0 0 12px #ff5e00;
+}
+
+#custom-ml4w-welcome:hover {
+  text-shadow: 0 0 8px #ffffff, 0 0 0 #79736b;
+}
+
+#workspaces button {
+  color: #888;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+  padding-bottom: 6px;
+  text-shadow: 0 0 8px #ffffff, 0 0 0px #ac8fb6;
+}
+
+#workspaces button:hover {
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff, 0 0 0px #ffffff;
+  animation-name: button-blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes button-blink {
+  to {
+    color: #ff5555;
+    text-shadow: 0 0 8px #ffaaaa, 0 0 0px #ffaaaa;
+  }
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: none;
+}
+
+#pulseaudio {
+  color: @maroon;
+}
+
+#network {
+  color: @yellow;
+}
+
+#temperature {
+  color: @sky;
+}
+
+#battery,
+#custom-fcitx5 {
+  color: @green;
+}
+
+#clock {
+  color: @yellow;
+}
+
+#custom-updates,
+#custom-pacman {
+  color: @mauve;
+}
+
+#power-profiles-daemon {
+  color: @peach;
+}
+
+#custom-notification {
+  color: @red;
+}
+
+#window {
+  color: @rosewater;
+}
+
+button,
+#bluetooth,
+#pulseaudio,
+#network,
+#custom-fullscreen,
+#custom-language,
+#custom-fcitx5,
+#custom-pacman,
+#temperature,
+#power-profiles-daemon,
+#custom-ml4w-welcome,
+#clock,
+#battery,
+#custom-notification {
+  padding: 10px 10px;
+  margin: 0;
+}
+
+button:first-child {
+  padding-left: 30px;
+}
+
+#custom-language,
+#custom-fcitx5,
+#battery {
+  padding-left: 20px;
+}
+
+#network,
+#custom-fullscreen,
+#clock {
+  padding-right: 20px;
+}
+
+.modules-left {
+  background-color: transparent;
+  padding: 0;
+}
+
+#custom-empty {
+  margin: 0 10px 0 10px;
+}
+
+#window>* {
+  font-size: 17px;
+  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); */
+  /* color: rgb(255, 255, 255); */
+}
+
+#custom-fcitx5,
+#battery {
+  background-color: transparent;
+  margin-left: 20px;
+}
+
+.modules-right>*>*:not(#hyprland-language):not(#custom-fcitx5):not(#clock):not(#custom-notification):not(#custom-updates):not(#battery) {
+  background-color: transparent;
+}
+
+#clock,
+#custom-notification {
+  background-color: transparent;
+}
+
+#power-profiles-daemon {
+  padding-top: 0;
+  padding-bottom: 3px;
+  padding-left: 3px;
+}
+
+#custom-fullscreen {
+  color: #75e4a5;
+  margin-left: -15px;
+  animation: breathing-light 1.5s steps(12) infinite;
+}
+
+@keyframes breathing-light {
+  0% {
+    text-shadow: 0 0 2px rgba(48, 142, 35, 0);
+    color: #43815e;
+  }
+
+  50% {
+    text-shadow: 0 0 10px rgb(209, 255, 176);
+    color: #75e4a5;
+  }
+
+  100% {
+    text-shadow: 0 0 2px rgba(138, 151, 123, 0.4);
+    color: #46805f;
+  }
+}
+
+#custom-notification {
+  font-size: 20px;
+  padding-right: 18px;
+  padding-left: 4px;
+  padding-bottom: 12px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @sapphire;
+}
+
+@keyframes blink {
+  to {
+    color: #AA0000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  font-weight: bold;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}
+
