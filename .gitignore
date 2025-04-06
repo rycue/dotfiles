@@ -30,6 +30,8 @@
 !dotfiles/.config/waybar
 !dotfiles/.config/waybar/**
 !.config/
+!.config/hypr
+!.config/hypr/*
 !.config/pipewire
 !.config/pipewire/**
 !.config/waybar
