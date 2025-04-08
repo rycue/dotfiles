@@ -4,3 +4,25 @@ export ANKI_WAYLAND=1
 # alias fastfetch="$HOME/.local/bin/fastfetch"
 # alias fastfetch="/usr/bin/fastfetch"
 # alias fastfetch="fastfetch --config ~/.config/fastfetch/config.jsonc"
+export PATH=$PATH:/var/lib/snapd/snap/bin
+export HIST_IGNORE="*password*:*token*:*secret*"
+setopt HIST_IGNORE_SPACE
+export HISTIGNORE="*BW_SESSION*"
+setopt HIST_IGNORE_DUPS
+
+
+# Detect when BW_SESSION is exported but ignored from history
+# Detect and alert when any command starts with a space (not saved in history)
+# Detect and alert when any command starts with a space (not saved in history)
+preexec() {
+  if [[ "$1" == " "* ]]; then
+    echo ""
+    echo -e "\033[1;34m════════════════════════════════════════════════════════════════════\033[0m"  # Blue Line for separation
+    echo -e "\033[1;33m✨  Command with leading space detected: \033[0m"  # Yellow header
+    echo -e "\033[1;32m    '$1'\033[0m"  # Green for the actual command
+    echo -e "\033[1;31m🛑  NOT saved in history!\033[0m"  # Red for the important message
+    echo -e "\033[1;34m════════════════════════════════════════════════════════════════════\033[0m"  # Blue line for separation
+    echo ""
+  fi
+}
+

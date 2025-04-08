@@ -44,4 +44,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 ## I ADDD THIIIIIIIIIIIIIIIIS
 unalias fastfetch
-fastfetch -l ~/.config/fastfetch/amogus.txt
+# fastfetch -l ~/.config/fastfetch/amogus.txt
+fastfetch --config ~/.config/fastfetch/config_3.jsonc
+setopt HIST_IGNORE_SPACE
+export HISTIGNORE="*BW_SESSION*"
