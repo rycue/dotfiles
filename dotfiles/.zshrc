@@ -48,3 +48,9 @@ unalias fastfetch
 fastfetch --config ~/.config/fastfetch/config_3.jsonc
 setopt HIST_IGNORE_SPACE
 export HISTIGNORE="*BW_SESSION*"
+
+# ~/.zshrc
+if [[ -n "$ZSH_RC_LOADED" ]]; then
+  return
+fi
+export ZSH_RC_LOADED=1
