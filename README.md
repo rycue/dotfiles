@@ -4,11 +4,11 @@ Hey there! 👋 This repo contains my personal config files for a bunch of tools
 
 > ### ⚠️ Note
 > 
-> These dotfiles are **highly opinionated**, **disorganized**, and may have some configs that don’t apply to everyone. Customizing them requires some knowledge of scripting and the tools I use. Please **review and tweak** the files manually instead of blindly applying everything. 😅
+> These dotfiles are **highly opinionated**, **disorganized**, and may have some configs that don’t apply to everyone. Customizing them requires some knowledge of scripting and the tools I use. Please **review and tweak** the files manually instead of blindly applying everything.
 > 
-> **Currently, there is no installer script.** It’s all **manual setup** for now, but I might add an installer in the future. ✨
+> **Currently, there is no installer script.** It’s all **manual setup** for now, but I might add an installer in the future.
 > 
-> So yeah, the repo’s still a work in progress, but feel free to use it on your own, give it a shot (...and send feedback)! 🛠️
+> So yeah, the repo’s still a work in progress, but feel free to use it on your own, give it a shot (...and send feedback)!
 
 **ℹ️ ALSO NOTE**: These dotfiles are **heavily based** on the preconfigured dotfiles from [mylinuxforwork/dotfiles](https://github.com/mylinuxforwork/dotfiles), so they’re not built from scratch. Thanks to Stephen Raabe and the repo for the foundation! 🙌
 
