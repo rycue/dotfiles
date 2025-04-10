@@ -3,6 +3,7 @@
 
 # Unignore the .gitignore file itself
 !.gitignore
+!README.md
 
 # Unignore essential shell and configuration files (if you want them)
 !.bashrc
@@ -31,9 +32,6 @@
 !dotfiles/.config/hypr/**
 !dotfiles/.config/waybar
 !dotfiles/.config/waybar/**
-!.config/
-!.config/hypr
-!.config/hypr/*
 !.config/pipewire
 !.config/pipewire/**
 !.config/waybar
