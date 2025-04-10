@@ -16,13 +16,13 @@ Hey there! 👋 This repo contains my personal config files for a bunch of tools
 
 This is my personal collection of configuration files for various tools and applications on my **EndeavourOS** (Arch-based) setup. Since these configs are customized for my needs, they may not work perfectly for everyone. There are also some experimental and incomplete files, and a few symbolic links that might not be fully explained. 🙃
 
-- **Distribution**: EndeavourOS x86_64 (Arch-based) 🖥️
-- **Window Manager**: Hyprland 🌈
-- **Compositor**: Hyprland (Wayland) 🌀
-- **Display Manager**: SDDM 💻
-- **Shell**: Zsh ⌨️
-- **Terminal**: Kitty 🐱
-- **Editor**: VSCode / Neovim 📝
+- **Distribution**: EndeavourOS x86_64 (Arch-based)
+- **Window Manager**: Hyprland
+- **Compositor**: Hyprland (Wayland)
+- **Display Manager**: SDDM
+- **Shell**: Zsh
+- **Terminal**: Kitty
+- **Editor**: VSCode / Neovim
     
 
 ## 📂 Repo Structure
@@ -118,7 +118,7 @@ Here’s what I’m planning (or considering) for future updates:
 - [ ] 📜 **Add a basic installer script** (dotfile manager or bare repo setup)  
 - [ ] 📸 **Add screenshots for all Waybar themes**  
 - [ ] 📘 **Create a `docs/` directory with setup guides**
-- [ ] ...
+- [ ] 🌱 **Eventually rebuild everything from scratch (no preconfig base)**
 
 
 ## 🥜 In a Nutshell
