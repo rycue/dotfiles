@@ -3,6 +3,8 @@
 Hey there! 👋 This repo contains my personal config files for a bunch of tools and applications I use on my system. They’re customized to fit my workflow and setup, so they might be a helpful starting point for anyone looking to personalize their environment. 🚀
 
 > ### ⚠️ Note
+> Manually configured (did not use dotfile manager)
+>
 > 
 > These dotfiles are **highly opinionated**, **disorganized**, and may have some configs that don’t apply to everyone. Customizing them requires some knowledge of scripting and the tools I use. Please **review and tweak** the files manually instead of blindly applying everything.
 > 
