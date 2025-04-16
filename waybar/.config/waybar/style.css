@@ -104,7 +104,7 @@ button {
     padding: 0 8px 2px 8px;
     /* border: 1px solid rgb(255, 255, 255); */
     /* color: #333; */
-    color: #16779d;
+    color: #1c627d;
     background-color: rgba(255, 255, 255, 0.7);
     /* border-radius: 10px; */
 }
@@ -189,7 +189,7 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    color: #9f4063;
 }
 
 

@@ -103,3 +103,6 @@ $HOME/
 
 <br>
  <center><strong>🚧 Work In Progress 🚧</strong></center>
+
+ <!-- Requires:
+ - jq - Command-line JSON processor. Used by workspace-notifier.zsh -->
