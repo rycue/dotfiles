@@ -1,0 +1,8 @@
+# Ignore temporary/junk files
+*.swp
+*.bak
+*.tmp
+*.log
+
+# Ignore stow-specific metadata (if ever used)
+*/.stow-local
