@@ -92,7 +92,6 @@ $HOME/
 │       └── dream
 │           └── dream.conf
 ├── .zshrc
-├── README.md
 └── .local
     └── bin
         ├── theme-switcher.zsh
