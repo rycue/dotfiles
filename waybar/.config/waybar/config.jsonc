@@ -4,46 +4,75 @@
     // "position": "left", // Waybar position (top|bottom|left|right)
     "height": 32, // Waybar height (to be removed for auto height)
     "width": 1560, // Waybar width
-    "padding-top": 100,
-    "spacing": 1, // Gaps between modules (4px)
-    
+    // "padding-top": 100,
+    "margin-top": 10,
+    "margin-bottom": -8,
+    "spacing": 0, // Gaps between modules (4px)
     
 // ╭──────────────────────────────────────────────────────────────╮
 // │                        MODULES DISPLAY                       │
 // ╰──────────────────────────────────────────────────────────────╯
     "modules-left": [
-        "hyprland/workspaces"
+        // "hyprland/workspaces"
+        "pulseaudio",
+        "mpd",
+        "network",
+        "temperature",
+        "custom/language"
         // ,"hyprland/mode"
         // ,"custom/media"
     ],
                             "modules-center": [
-                                "hyprland/window"
+                                "hyprland/workspaces"
+                                // "hyprland/window"
                             ],
                                                     "modules-right": [
+                                                        "battery",
                                                         // "idle_inhibitor",
                                                         // ,"tray"
-                                                        "pulseaudio",
-                                                        "mpd",
-                                                        "network",
-                                                        "temperature",
-                                                        "custom/language",
-                                                        "battery",
                                                         "clock"
                                                     ],
 // ╭──────────────────────────────────────────────────────────────╮
 // │                            FACTORY                           │
 // ╰──────────────────────────────────────────────────────────────╯
     // Modules configuration
-    "hyprland/workspaces": {
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "hyprland/workspaces": {  
         "disable-scroll": true,
         "all-outputs": true,
-        "warp-on-scroll": false,
+	    "sort-by-number": true,
+        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            // "active": "〠",
+            "urgent": ""
         }
+        // ,"persistent-workspaces": {
+        //     "1": [],
+        //     "2": [],
+        //     "3": [],
+        //     "4": []
+        //   }
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -87,8 +116,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "󱑎  {:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%m月%d日-%a}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -102,8 +132,8 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["󱃃","󱃃","󱃃","󱃃","󱃃","󱃃","󰔏","󰔏","󰔏","󱃂"]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -116,14 +146,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format": "{icon} {capacity}%",
+        "format-full": "󰂃 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
         "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format-alt": "{time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
     },
     "power-profiles-daemon": {
       "format": "{icon}",
@@ -138,21 +168,21 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "  {essid}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "  Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format": "{icon}   {volume}%{format_source}",
+        "format-bluetooth": "{icon}{volume}%  {format_source}",
+        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-muted": "󰖁 {volume}%{format_source}",
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
-        "format-source-muted": "",
+        "format-source-muted": " 󰍭 ",
         "format-icons": {
             "headphone": "󱡏",
             "hands-free": "???",
@@ -160,7 +190,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["","󰕾","",""]
         },
         "on-click": "pavucontrol"
     },
@@ -189,6 +219,6 @@
 		}
     },
     "custom/language": {
-        "format": " ENG"
+        "format": " 日本JP"
     }
 }
