@@ -2,10 +2,10 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "left", // Waybar position (top|bottom|left|right)
-    // "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "height": 32, // Waybar height (to be removed for auto height)
+    "width": 1560, // Waybar width
     "padding-top": 100,
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 1, // Gaps between modules (4px)
     
     
 // ╭──────────────────────────────────────────────────────────────╮
@@ -13,43 +13,38 @@
 // ╰──────────────────────────────────────────────────────────────╯
     "modules-left": [
         "hyprland/workspaces"
-        // "hyprland/mode",
-        // "custom/media"
+        // ,"hyprland/mode"
+        // ,"custom/media"
     ],
                             "modules-center": [
                                 "hyprland/window"
                             ],
                                                     "modules-right": [
-                                                        "mpd",
-                                                        "idle_inhibitor",
+                                                        // "idle_inhibitor",
+                                                        // ,"tray"
                                                         "pulseaudio",
+                                                        "mpd",
                                                         "network",
                                                         "temperature",
-                                                        "hyprland/language",
+                                                        "custom/language",
                                                         "battery",
-                                                        "clock",
-                                                        "tray"
+                                                        "clock"
                                                     ],
 // ╭──────────────────────────────────────────────────────────────╮
 // │                            FACTORY                           │
 // ╰──────────────────────────────────────────────────────────────╯
     // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -156,12 +151,12 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "", // MIC VOL DISP: Leave it empty to override default
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "headphone": "󱡏",
+            "hands-free": "???",
+            "headset": " ",
             "phone": "",
             "portable": "",
             "car": "",
@@ -192,5 +187,8 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/language": {
+        "format": " ENG"
     }
 }

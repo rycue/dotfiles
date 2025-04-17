@@ -21,4 +21,4 @@ fi
 cp "$THEME_FOLDER/$THEME_NAME/$THEME_NAME.conf" "$HOME/.config/hypr/theme.conf"
 
 echo "Switched to theme '$THEME_NAME'"
-notify-send --urgency=low --category=wide "Theme Switcher" "Switched to theme '$THEME_NAME'." -t 5000
+notify-send --urgency=low --category=250w "Theme Switcher" "Switched to theme '$THEME_NAME'." -t 5000
