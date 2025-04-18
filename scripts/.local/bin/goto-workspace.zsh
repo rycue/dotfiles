@@ -33,6 +33,6 @@ else
   hyprctl dispatch workspace "$target_ws"
   sleep 0.05
   if $show_notification; then
-    notify-send --urgency=normal --category=250w "Workspace $target_ws" "Switched from workspace $current_ws." -t 1000
+    notify-send --urgency=normal --category=250w "Workspace $target_ws" "Switched from workspace $current_ws." -t 750
   fi
 fi

@@ -8,10 +8,14 @@ brightness_level=$(brightnessctl get)
 if [[ "$battery_status" == "Discharging" ]]; then
     if (( battery_level <= 15 )); then
         brightnessctl set 10%
-        notify-send --urgency=critical "Critical Battery" "\nBattery level is at ${battery_level}%!" -t 5000
+        notify-send --urgency=critical "Critical Battery" "\nBattery level is at ${battery_level}%!" -t 15000
         sleep 5
         brightnessctl set $brightness_level
     elif (( battery_level <= 30 )); then
-        notify-send --urgency=normal --category=225w "🔋 Low Battery" "Battery level is at ${battery_level}%." -t 5000
+        notify-send --urgency=normal --category=225w "🔋 Low Battery" "Battery level is at ${battery_level}%." -t 15000
+    fi
+elif [[ "$battery_status" == "Charging" ]]; then
+    if (( battery_level >= 90 )); then
+        notify-send --urgency=normal --category=300w "Battery level is at ${battery_level}%" "Consider unplugging the charger." -t 15000
     fi
 fi

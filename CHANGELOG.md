@@ -1,8 +1,15 @@
+## 🏷️ v0.2.2
+
+### 🎯 Improved
+- 🔋 **Battery Notifier Script** (`battery-notifier.zsh`). Will now notify when battery charging reaches at 90%+
+
+---
+
 ## 🏷️ v0.2.1 — Battery Notifier & Workflow Enhancements (2025-04-18)
 
 ### ✨ Added
 - 🔋 **Battery Notifier Script** (`battery-notifier.zsh`) that alerts user on low battery via Mako notifications
-- 🔔 Mako: Added notification for discharging low and critical battery.
+- 🔔 **Mako:** Added notification for discharging low and critical battery.
 - 🛠️ **Systemd unit** to auto-run battery notifier on boot
 
 ### 🎯 Improved
