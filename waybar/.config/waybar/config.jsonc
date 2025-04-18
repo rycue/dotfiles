@@ -116,9 +116,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "󱑎  {:%I:%M}",
+        "format": "󱑎   {:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%m月%d日-%a}"
+        "format-alt": "{:%m月%d日(%a)}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -147,8 +147,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-full": "󰂃 {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
+        "format-full": "󰂃 {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time}",
         // "format-good": "", // An empty format will hide the module
@@ -178,11 +178,11 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}   {volume}%{format_source}",
-        "format-bluetooth": "{icon}{volume}%  {format_source}",
-        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-bluetooth": "{icon} {volume}%{format_source}",
+        "format-bluetooth-muted": "{format_source}",
         "format-muted": "󰖁 {volume}%{format_source}",
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
-        "format-source-muted": " 󰍭 ",
+        "format-source-muted": "  󰍭",
         "format-icons": {
             "headphone": "󱡏",
             "hands-free": "???",

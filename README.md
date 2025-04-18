@@ -44,8 +44,16 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 ├── scripts
 │   └── .local
 │       └── bin
+│           ├── battery-notifier.zsh
+│           ├── goto-workspace.zsh
 │           ├── theme-switcher.zsh
 │           └── toggle-waybar.zsh
+├── systemd
+│   └── .config
+│       └── systemd
+│           └── user
+│               ├── battery-notifier.service
+│               └── battery-notifier.timer
 ├── themes
 │   └── ritsuki-themes
 │       ├── chisel
@@ -55,6 +63,7 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 │       └── dream
 │           ├── config.jsonc
 │           └── dream.conf
+├── .vscode
 ├── waybar
 │   └── .config
 │       └── waybar
@@ -74,28 +83,28 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 $HOME/
 ├── .config
 │   ├── fastfetch
-│   │   └── config.jsonc
+│   │   └── config.jsonc  -> ~/dotfiles/fastfetch/.config/fastfetch/config.jsonc
 │   ├── hypr
-│   │   ├── hyprland.conf
-│   │   ├── keybindings.conf
-│   │   ├── theme.conf
-│   │   └── workspace.conf
+│   │   ├── hyprland.conf     -> ~/dotfiles/hypr/.config/hypr/hyprland.conf
+│   │   ├── keybindings.conf  -> ~/dotfiles/hypr/.config/hypr/keybindings.conf
+│   │   ├── theme.conf        -> ~/dotfiles/hypr/.config/hypr/theme.conf
+│   │   └── workspace.conf    -> ~/dotfiles/hypr/.config/hypr/workspace.conf
 │   ├── mako
-│   │   └── config
-│   ├── waybar
-│   │   ├── config.jsonc
-│   │   └── style.css
-│   └── ritsuki-themes
-│       ├── chisel
-│       │   └── waybar
-│       │       └── style.css
-│       └── dream
-│           └── dream.conf
-├── .zshrc
+│   │   └── config        -> ~/dotfiles/mako/.config/mako/config
+│   ├── systemd
+│   │   └── user
+│   │       ├── battery-notifier.service -> ~/dotfiles/systemd/.config/systemd/user/battery-notifier.service
+│   │       └── battery-notifier.timer   -> ~/dotfiles/systemd/.config/systemd/user/battery-notifier.timer
+│   └── waybar
+│       ├── config.jsonc  -> ~/dotfiles/waybar/.config/waybar/config.jsonc
+│       └── style.css     -> ~/dotfiles/waybar/.config/waybar/style.css
+├── .zshrc                     -> ~/dotfiles/zsh/.zshrc
 └── .local
     └── bin
-        ├── theme-switcher.zsh
-        └── toggle-waybar.zsh
+        ├── battery-notifier.zsh  -> ~/dotfiles/scripts/.local/bin/battery-notifier.zsh
+        ├── goto-workspace.zsh    -> ~/dotfiles/scripts/.local/bin/goto-workspace.zsh
+        ├── theme-switcher.zsh    -> ~/dotfiles/scripts/.local/bin/theme-switcher.zsh
+        └── toggle-waybar.zsh     -> ~/dotfiles/scripts/.local/bin/toggle-waybar.zsh
 ```
 </details>
 

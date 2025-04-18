@@ -109,16 +109,19 @@ button {
     /* border-radius: 10px; */
 }
 
-
-/* #window,
-#workspaces {
-    margin: 0 4px;
-} */
-
-
-/* .modules-right > widget > * { */
-    /* border-radius: 0 0 16px 16px; */
-/* } */
+/* (Currently, you must change according to the moddule placement) 
+╭──────────────────────────────────────────────────────────────╮
+│                 HARD-CODED MODULES ON THE EDGES              │
+╰──────────────────────────────────────────────────────────────╯*/
+.modules-left > widget > #pulseaudio,
+.modules-right> widget > #battery {
+    padding-left: 12px; /* 8(combined) + 4(ind spacing) = 12px*/
+}
+.modules-left > widget > #custom-language,
+.modules-right> widget > #clock {
+    padding-right: 12px;
+}
+/* ─────────────────────────────────────────────────────────── */
 
 .modules-left > widget:first-child > *, .modules-right > widget:first-child > *  {
     border-radius: 8px 0 0 8px;
@@ -127,7 +130,6 @@ button {
     border-radius: 0 8px 8px 0;
 }
 
-
 /* #battery.charging, #battery.plugged {
     color: #ffffff;
     background-color: #c5ffdd;
@@ -135,18 +137,25 @@ button {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        /* background-color: #ffffff; */
+        color: #882222;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: transparent;
     animation-name: blink;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#battery.warning:not(.charging) {
+    color: transparent;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(18);
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }

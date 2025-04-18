@@ -1,0 +1,7 @@
+[Unit]
+Description=Battery notifier script
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/battery-notifier.zsh
+
