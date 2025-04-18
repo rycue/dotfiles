@@ -12,6 +12,7 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 - **Notification Daemon:** [Mako](https://github.com/emersion/mako)
 - **System Info Tool:** [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - **Scripts:** Custom shell utilities like `theme-switcher.zsh` and `toggle-waybar.zsh`
+- **Screenshot Tool:** [Hyprshot](https://github.com/Gustash/Hyprshot)
 - **Theming:** More themes under the directory name of `ritsuki-themes` *(currently working on `chisel`)*
 - **Dotfile Management:** Managed via [GNU Stow]((https://www.gnu.org/software/stow/manual/stow.html))
 - **Workflow:** Symlinked cleanly from `/dotfiles` into `$HOME/` using `stow`
@@ -24,6 +25,7 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 
 ```plaintext
 ~/dotfiles
+├── CHANGELOG.md
 ├── fastfetch
 │   └── .config
 │       └── fastfetch
