@@ -3,7 +3,7 @@ Description=Battery notifier timer
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=1min
+OnUnitActiveSec=60sec
 AccuracySec=1sec
 Persistent=false
 
