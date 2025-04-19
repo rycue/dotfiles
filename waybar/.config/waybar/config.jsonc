@@ -15,6 +15,7 @@
     "modules-left": [
         // "hyprland/workspaces"
         "pulseaudio",
+        "bluetooth",
         "mpd",
         "network",
         "temperature",
@@ -175,14 +176,28 @@
         "format-disconnected": "  Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+    "bluetooth": {
+        "format": "  {status}",
+        "format-disabled": "  OFF",
+        "format-on": "  ON",
+        "format-connected": "  {device_alias}",
+        "format-connected-battery": "  {device_alias}",
+        "tooltip-format": "User: {controller_alias}\nConnected: {num_connections}",
+        "tooltip-format-connected": "User: {controller_alias}\nConnected: {num_connections}\n{device_enumerate}",
+        // "tooltip-format-connected": "User: {controller_alias} | Connected: {num_connections}\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "BT Address: {device_address}\nBattery: {device_battery_percentage}%",
+        "on-click": "alacritty -e bluetoothctl"
+        // ,"on-click": "sh -c 'alacritty -e sh -c \"bluetoothctl --help; echo; echo Press enter to continue...; read; bluetoothctl\"'"
+    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}   {volume}%{format_source}",
         "format-bluetooth": "{icon} {volume}%{format_source}",
-        "format-bluetooth-muted": "{format_source}",
-        "format-muted": "󰖁 {volume}%{format_source}",
+        "format-bluetooth-muted": " ({volume}%){format_source}",
+        "format-muted": " {volume}%{format_source}",
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
-        "format-source-muted": "  󰍭",
+        "format-source-muted": "  󰍭 OFF ",
         "format-icons": {
             "headphone": "󱡏",
             "hands-free": "???",
