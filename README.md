@@ -122,4 +122,5 @@ $HOME/
  - (pacman) stow - Manage installation of multiple softwares in the same directory tree
  - (pacman) jq - Command-line JSON processor. Used by workspace-notifier.zsh
  - (yay) hyprshot - A utility to easily take screenshots in Hyprland
+ - (yay) clipse - Configurable TUI clipboard manager for Unix
  -->
