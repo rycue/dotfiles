@@ -6,11 +6,14 @@ This dotfiles repo is a **work in progress**. I'm actively configuring Hyprland,
 
 ## 🚀 Features
 
+Note: Make sure you have these installed, if you want to use my dotfiles.
+
 - **Window Manager:** [Hyprland](https://hyprland.org/)
 - **Status Bar:** [Waybar](https://wiki.hyprland.org/Useful-Utilities/Status-Bars/)
 - **Shell:** [Zsh](https://ohmyz.sh/)
 - **Notification Daemon:** [Mako](https://github.com/emersion/mako)
 - **System Info Tool:** [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- **Wallpaper Manager:** [Waypaper](https://github.com/anufrievroman/waypaper) with [Swaybg](https://github.com/swaywm/swaybg)
 - **Scripts:** Custom shell utilities like `theme-switcher.zsh` and `toggle-waybar.zsh`
 - **Screenshot Tool:** [Hyprshot](https://github.com/Gustash/Hyprshot)
 - **Theming:** More themes under the directory name of `ritsuki-themes` *(currently working on `chisel`)*
