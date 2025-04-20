@@ -55,3 +55,12 @@ width=350
 
 [category=400w]
 width=400
+
+[category=center]
+anchor=center
+
+[category=brightness]
+anchor=top-center
+width=175
+text-alignment=center
+font=JetBrainsMono Nerd Font 12

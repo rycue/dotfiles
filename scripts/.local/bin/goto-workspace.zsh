@@ -26,13 +26,13 @@ fi
 # Switch only if not already there
 if [[ "$current_ws" == "$target_ws" ]]; then
   if $show_notification; then
-  notify-send --urgency=low --category=250w "Workspace $target_ws" "You're already here 👀"
+  notify-send -h string:x-canonical-private-synchronous:still-workspace --urgency=low --category=250w "Workspace $target_ws" "You're already here 👀"
   paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga 2>/dev/null
   fi
 else
   hyprctl dispatch workspace "$target_ws"
   sleep 0.05
   if $show_notification; then
-    notify-send --urgency=normal --category=250w "Workspace $target_ws" "Switched from workspace $current_ws." -t 750
+    notify-send -h string:x-canonical-private-synchronous:workspace --urgency=normal --category=250w "Workspace $target_ws" "Switched from workspace $current_ws." -t 3000
   fi
 fi
