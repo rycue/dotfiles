@@ -19,7 +19,7 @@
         "mpd",
         "network",
         "temperature",
-        "custom/language"
+        "custom/fcitx5"
         // ,"hyprland/mode"
         // ,"custom/media"
     ],
@@ -178,7 +178,8 @@
     },
     "bluetooth": {
         "format": "  {status}",
-        "format-disabled": "  OFF",
+        "format-disabled": "  DISABLED",
+        "format-off": "  OFF",
         "format-on": "  ON",
         "format-connected": "  {device_alias}",
         "format-connected-battery": "  {device_alias}",
@@ -197,7 +198,7 @@
         "format-bluetooth-muted": " ({volume}%){format_source}",
         "format-muted": "󰖁   ({volume}%){format_source}",
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
-        "format-source-muted": "  󰍭 OFF ",
+        "format-source-muted": "   󰍭 OFF",
         "format-icons": {
             "headphone": "󱡏",
             "hands-free": "???",
@@ -234,6 +235,12 @@
 		}
     },
     "custom/language": {
-        "format": " 日本JP"
+        "format": " 日本JP(Test)"
+    },
+    "custom/fcitx5": {
+        "exec": "~/.local/bin/fcitx5-language.zsh",
+        "interval": 1,
+        "format": " {}",
+        "on-click": "dbus-send --print-reply --session --dest=org.fcitx.Fcitx5 /controller_1 org.fcitx.Fcitx.Controller.SwitchNext"
     }
 }
