@@ -123,4 +123,11 @@ $HOME/
  - (pacman) jq - Command-line JSON processor. Used by workspace-notifier.zsh
  - (yay) hyprshot - A utility to easily take screenshots in Hyprland
  - (yay) clipse - Configurable TUI clipboard manager for Unix
+ 
+ Are used but optional:
+ - Language input tool
+    - (pacman) fcitx5 - Next generation of fcitx
+    - (pacman) fcitx5-mozc - Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
+    - (pacman) fctix5-configtool - Configuration Tool for Fcitx5
+        - IDEALLY, you can instead install: (pacman) fcitx5-mozc-ut - Fcitx5 module for Mozc (the Open Source edition of Google Japanese Input) bundled with the UT dictionary
  -->
