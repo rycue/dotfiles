@@ -12,13 +12,20 @@ THEME_NAME=$1
 THEME_FOLDER="$HOME/ritsuki-themes"
 
 # Check if the theme exists
-if [ ! -f "$THEME_FOLDER/$THEME_NAME/$THEME_NAME.conf" ]; then
+if [ ! -f "$THEME_FOLDER/$THEME_NAME/hyprland/$THEME_NAME.conf" ]; then
     echo "Theme '$THEME_NAME' not found!"
+    exit 1
+elif [ ! -f "$THEME_FOLDER/$THEME_NAME/waybar/style.css" ]; then
+    echo "Waybar style.css for theme '$THEME_NAME' not found!"
     exit 1
 fi
 
 # Copy the theme config to the hypr config folder
-cp "$THEME_FOLDER/$THEME_NAME/$THEME_NAME.conf" "$HOME/.config/hypr/theme.conf"
+cp "$THEME_FOLDER/$THEME_NAME/hyprland/$THEME_NAME.conf" "$HOME/.config/hypr/theme.conf"
+cp "$THEME_FOLDER/$THEME_NAME/waybar/style.css" "$HOME/.config/waybar/style.css"
 
 echo "Switched to theme '$THEME_NAME'"
-notify-send --urgency=low --category=250w "Theme Switcher" "Switched to theme '$THEME_NAME'." -t 5000
+killall waybar
+sleep 0.3
+nohup waybar >/dev/null 2>&1 &
+notify-send --urgency=normal --category=250w "Theme Switcher" "Switched to theme '$THEME_NAME'." -t 5000

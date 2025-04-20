@@ -195,7 +195,7 @@
         "format": "{icon}   {volume}%{format_source}",
         "format-bluetooth": "{icon} {volume}%{format_source}",
         "format-bluetooth-muted": " ({volume}%){format_source}",
-        "format-muted": " {volume}%{format_source}",
+        "format-muted": "󰖁   ({volume}%){format_source}",
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
         "format-source-muted": "  󰍭 OFF ",
         "format-icons": {
