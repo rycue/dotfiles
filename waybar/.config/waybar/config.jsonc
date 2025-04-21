@@ -29,6 +29,10 @@
                             ],
                                                     "modules-right": [
                                                         "battery",
+                                                        // "custom/cpu-governor",
+                                                        // "custom/power-profile-en",
+                                                        "custom/power-profile-ja",
+                                                        // "power-profiles-daemon",
                                                         // "idle_inhibitor",
                                                         // ,"tray"
                                                         "clock"
@@ -64,9 +68,9 @@
             "7": "七",
             "8": "八",
             "9": "九",
-            "10": "十",
+            "10": "十"
             // "active": "〠",
-            "urgent": ""
+            ,"urgent": "〠"
         }
         // ,"persistent-workspaces": {
         //     "1": [],
@@ -157,15 +161,32 @@
         "format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
+        "on-click": "~/.local/bin/power-profile-toggle.zsh"
+    },
+    "custom/power-profile-en": {
+        "format": "{}",
+        "tooltip": true,
+        "tooltip-format": "Power profile: {}",
+        "exec": "~/.local/bin/power-profile-status-en.zsh",
+        "interval": 1,
+        "on-click": "~/.local/bin/power-profile-toggle.zsh"
+    },
+    "custom/power-profile-ja": {
+        "format": "{}",
+        "tooltip": true,
+        "tooltip-format": "Power profile: {}",
+        "exec": "~/.local/bin/power-profile-status-ja.zsh",
+        "interval": 1,
+        "on-click": "~/.local/bin/power-profile-toggle.zsh"
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -200,9 +221,9 @@
         "format-source": "", // MIC VOL DISP: Leave it empty to override default
         "format-source-muted": "   󰍭 OFF",
         "format-icons": {
-            "headphone": "󱡏",
+            "headphone": " ",
             "hands-free": "???",
-            "headset": " ",
+            "headset": "󱡏  ",
             "phone": "",
             "portable": "",
             "car": "",
@@ -234,13 +255,17 @@
 			"hibernate": "systemctl hibernate"
 		}
     },
-    "custom/language": {
-        "format": " 日本JP(Test)"
-    },
     "custom/fcitx5": {
         "exec": "~/.local/bin/fcitx5-language.zsh",
         "interval": 1,
         "format": " {}",
         "on-click": "dbus-send --print-reply --session --dest=org.fcitx.Fcitx5 /controller_1 org.fcitx.Fcitx.Controller.SwitchNext"
+    },
+    "custom/cpu-governor": {
+    "format": "{}",
+    "exec": "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
+    "interval": 1,
+    "on-click": "~/.local/bin/cpupower-governor.zsh"
     }
+
 }

@@ -75,7 +75,13 @@ button {
 
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    /* background-color: #ffffff; */
+    color: transparent;
+    animation-name: blink;
+    animation-duration: 0.3s;
+    animation-timing-function: steps(18);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #clock,
@@ -90,6 +96,8 @@ button {
 #pulseaudio,
 #wireplumber,
 #custom-media,
+#custom-power-profile-en,
+#custom-power-profile-ja,
 #tray,
 #mode,
 #custom-language,

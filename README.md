@@ -13,6 +13,8 @@ Note: Make sure you have these installed, if you want to use my dotfiles.
 - **Shell:** [Zsh](https://ohmyz.sh/)
 - **Notification Daemon:** [Mako](https://github.com/emersion/mako)
 - **System Info Tool:** [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- **Clipboard Manager:** [Clipse](https://github.com/savedra1/clipse)
+- **Launcher:*** [Sherlock](https://github.com/Skxxtz/sherlock)
 - **Wallpaper Manager:** [Waypaper](https://github.com/anufrievroman/waypaper) with [Swaybg](https://github.com/swaywm/swaybg)
 - **Scripts:** Custom shell utilities like `theme-switcher.zsh` and `toggle-waybar.zsh`
 - **Screenshot Tool:** [Hyprshot](https://github.com/Gustash/Hyprshot)
