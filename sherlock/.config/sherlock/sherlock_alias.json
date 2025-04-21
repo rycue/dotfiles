@@ -1,0 +1,29 @@
+{
+    "Visual Studio Code": {
+        "name": "Visual Studio Code",
+        "icon": "code",
+        "exec": "code --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+        "keywords": "co, cod, code, vscode, visual studio code"
+    },
+    "Obsidian": {
+        "name": "黒曜石",
+        "icon": "obsidian",
+        "exec": "obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+        "keywords": "obsidian, brain, notes"
+    },
+    "Zen Browser": {
+        "name": "Zen Browser",
+        "icon": "browser",
+        "exec": "zen-browser -P",
+        "keywords": "zen browser, browser, web browser"
+    },
+    "WPS Writer": {
+        "name": "WPS 2019",
+        "icon": "wps",
+        "exec": "wps --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+        "keywords": "wps, wps writer"
+    }
+}
+
+
+
