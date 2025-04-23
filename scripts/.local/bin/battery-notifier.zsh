@@ -16,6 +16,6 @@ if [[ "$battery_status" == "Discharging" ]]; then
     fi
 elif [[ "$battery_status" == "Charging" ]]; then
     if (( battery_level >= 90 )); then
-        notify-send --urgency=normal --category=300w "Battery level is at ${battery_level}%" "Consider unplugging the charger." -t 15000
+        notify-send --urgency=normal --category=275w "Battery level is at ${battery_level}%" "Consider unplugging the charger." -t 15000
     fi
 fi

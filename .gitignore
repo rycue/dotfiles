@@ -6,3 +6,7 @@
 
 # Ignore stow-specific metadata (if ever used)
 */.stow-local
+
+
+# Ignore specific files
+fan-control.zsh

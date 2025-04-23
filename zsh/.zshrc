@@ -110,3 +110,4 @@ alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland --e
 alias obsidian='obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime'
 
 fastfetch
+

@@ -17,11 +17,17 @@
         "exec": "zen-browser -P",
         "keywords": "zen browser, browser, web browser"
     },
-    "WPS Writer": {
-        "name": "WPS 2019",
-        "icon": "wps",
-        "exec": "wps --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
-        "keywords": "wps, wps writer"
+    "Aesprite": {
+        "name": "Aseprite",
+        "icon": "aseprite",
+        "exec": "aseprite --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+        "keywords": "aseprite, sprites"
+    },
+    "peek": {
+        "name": "Peek - GIF Recorder",
+        "icon": "peek",
+        "exec": "peek --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
+        "keywords": "peek, gif, screen recorder"
     }
 }
 
