@@ -127,6 +127,11 @@ $HOME/
  - (yay) clipse - Configurable TUI clipboard manager for Unix
  
  Are used but optional:
+ - OCR
+    - tesseract - An OCR program
+    - imagemagick - An image viewing/manipulation program
+    - wl-clipboard - Command-line copy/paste utilities for Wayland
+
  - Reminder utility
     (pacman) at - AT and batch delayed command scheduling utility and daemon
  - Language input tool

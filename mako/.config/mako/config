@@ -16,7 +16,7 @@ max-visible=5
 # Passive info (weather, music track, clipboard)
 [urgency=low]
 background-color=#1e1e2e
-border-color=#74e295  
+border-color=#74e295
 text-color=#a6e3a1
 default-timeout=1500
 
@@ -67,3 +67,15 @@ anchor=top-center
 width=175
 text-alignment=center
 font=JetBrainsMono Nerd Font 12
+
+[category=reminder]
+anchor=center
+background-color=#2E1E1E
+border-color=#E29174
+text-color=#E3C1A1
+text-alignment=center
+width=350
+height=200
+padding=20
+border-size=4
+font=JetBrainsMono Nerd Font 16

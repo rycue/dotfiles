@@ -30,11 +30,11 @@ for (( i = 0; i < COUNT; i++ )); do
     TIME=$(date -d "@$(( EPOCH + i * 180 ))" +"%H:%M %D")
     
     if [[ -n "$TITLE" && -n "$BODY" ]]; then
-        CMD="notify-send --urgency=critical \"$TITLE\" \"$BODY\""
+        CMD="notify-send --urgency=reminder \"$TITLE\" \"$BODY\""
     elif [[ -n "$TITLE" ]]; then
-        CMD="notify-send --urgency=critical \"$TITLE\""
+        CMD="notify-send --urgency=reminder \"$TITLE\""
     else
-        CMD="notify-send --urgency=critical \"$BODY\""
+        CMD="notify-send --urgency=reminder \"$BODY\""
     fi
 
     echo "$CMD" | at "$(date -d "@$(( EPOCH + i * 180 ))" +"%H:%M %m/%d/%Y")"
