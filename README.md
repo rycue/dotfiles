@@ -127,6 +127,8 @@ $HOME/
  - (yay) clipse - Configurable TUI clipboard manager for Unix
  
  Are used but optional:
+ - Reminder utility
+    (pacman) at - AT and batch delayed command scheduling utility and daemon
  - Language input tool
     - (pacman) fcitx5 - Next generation of fcitx
     - (pacman) fcitx5-mozc - Fcitx5 Module of A Japanese Input Method for Chromium OS, Windows, Mac and Linux (the Open Source Edition of Google Japanese Input)
