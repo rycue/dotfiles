@@ -3,7 +3,7 @@
         "name": "Visual Studio Code",
         "icon": "code",
         "exec": "code --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime",
-        "keywords": "co, cod, code, vscode, visual studio code"
+        "keywords": "code, vscode, visual studio code"
     },
     "Obsidian": {
         "name": "黒曜石",
